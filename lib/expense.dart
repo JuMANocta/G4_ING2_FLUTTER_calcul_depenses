@@ -13,7 +13,7 @@ class Expense {
   }
 
   static final colums = ['id', 'montant', 'date', 'category'];
-  factory Expense.fromMap(Map<String, dynamic> data) {
+  factory Expense.fromMap(Map<dynamic, dynamic> data) {
     return Expense(data['id'], data['montant'], DateTime.parse(data['date']),data['category']);
   }
   Map<String, dynamic> toMap() => {
